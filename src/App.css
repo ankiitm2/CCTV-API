@@ -25,6 +25,18 @@ body {
   width: max-content;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.customGap {
+  gap: 0.7rem;
+}
+
 /* ------------- */
 
 .logo-wrapper {
@@ -223,6 +235,43 @@ table td span.inactive {
   color: #7e7e7e;
 }
 
+table td > div svg {
+  margin-right: 0.2rem;
+}
+
+/* ------------------------------------ */
+.progress-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container svg {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: -0.0625rem;
+  left: -0.5rem;
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: #f0f8ff;
+  stroke-width: 4;
+}
+
+.progress-circle-fg {
+  fill: none;
+  stroke: #ffa500;
+  stroke-dasharray: 113;
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+table td > div.d-flex .progress-container.green .progress-circle-fg {
+  stroke: #008000;
+}
+
 /* pagination */
 
 .pagination {
@@ -281,5 +330,10 @@ button:focus {
   table td,
   .filter_box select {
     font-size: 1.125rem;
+  }
+
+  .progress-container svg {
+    top: 0.09rem;
+    left: -0.4rem;
   }
 }
