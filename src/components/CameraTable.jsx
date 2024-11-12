@@ -65,7 +65,9 @@ const CameraTable = ({
             </td>
             <td>{camera.location}</td>
             <td>{camera.recorder || "N/A"}</td>
-            <td>{camera.tasks || "N/A"} Tasks</td>
+            <td>
+              <div className="d-flex">{camera.tasks || "N/A"} Tasks</div>
+            </td>
             <td className="text-center">
               <span
                 className={

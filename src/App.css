@@ -266,4 +266,18 @@ button:focus {
   body {
     font-size: larger;
   }
+
+  .header .content h2 {
+    font-size: 1.775rem;
+  }
+
+  .header .content p {
+    font-size: 1.075rem;
+  }
+
+  table,
+  table td,
+  .filter_box select {
+    font-size: 1.0625rem;
+  }
 }
