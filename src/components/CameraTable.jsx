@@ -45,18 +45,20 @@ const CameraTable = ({
               </label>
             </td>
             <td>
-              <span
-                className="status"
-                style={{
-                  backgroundColor:
-                    camera.current_status === "Online"
-                      ? "green"
-                      : camera.current_status === "Offline"
-                      ? "red"
-                      : "black",
-                }}
-              ></span>
-              {camera.name}
+              <div className="d-flex">
+                <span
+                  className="status"
+                  style={{
+                    backgroundColor:
+                      camera.current_status === "Online"
+                        ? "green"
+                        : camera.current_status === "Offline"
+                        ? "red"
+                        : "black",
+                  }}
+                ></span>
+                {camera.name}
+              </div>
             </td>
             <td>
               {camera.health.cloud} {camera.health.device}
