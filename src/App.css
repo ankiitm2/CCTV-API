@@ -1,0 +1,255 @@
+:root {
+  --bg-white: #fff;
+  --text-black: #000;
+  --theme-bg: #f9f9f9;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--theme-bg);
+  color: var(--text-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ----------- */
+.text-center {
+  text-align: center;
+}
+
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* header */
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.header .content p,
+.header .content h2 {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.header .content p {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.header .searchBtn {
+  height: 2rem;
+  background-color: #f3f3f4;
+  border: 0;
+  padding: 0.3rem 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  gap: 0.1rem;
+}
+
+.header .searchBtn input:focus-visible,
+.header .searchBtn input:focus,
+.header .searchBtn input {
+  background-color: transparent;
+  border: 0;
+  outline: unset;
+  box-shadow: unset;
+  color: var(--text-black);
+}
+
+/* cameraPage */
+#root {
+  width: 100%;
+}
+
+/* checkbox */
+.container input {
+  display: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: #2196f300;
+  border-radius: 0.25rem;
+  transition: all 0.25s;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #3867eb;
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  border: 0.1rem solid black;
+  left: 0;
+  top: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.25rem;
+  transition: all 0.25s, border-width 0.1s;
+  border-color: #3867eb;
+}
+
+.container input:checked ~ .checkmark:after {
+  left: 0.3rem;
+  top: 0.09rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  border-color: #fff0 white white #fff0;
+  border-width: 0 0.15rem 0.15rem 0;
+  border-radius: 0em;
+  transform: rotate(45deg);
+}
+
+/* filter_box */
+.filter_box {
+  background-color: var(--bg-white);
+  margin-bottom: 2px;
+  padding: 0.2rem 1rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.filter_box > div {
+  padding: 0.2rem;
+  border: solid 1px #7e7e7e;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.filter_box select {
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  border: 0;
+  outline: 0;
+}
+
+.filter_box select option {
+  scrollbar-width: thin;
+}
+
+/* table */
+.table-wrapper {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #7e7e7e;
+  background-color: var(--bg-white);
+  border-collapse: collapse;
+}
+
+table thead th {
+  border-bottom: solid 2px var(--theme-bg) !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+table tbody td {
+  border-bottom: solid 1px var(--theme-bg) !important;
+}
+
+table th,
+table td {
+  padding: 0.7rem 0.8rem;
+}
+
+table td {
+  font-size: 14px;
+  font-weight: 400;
+  color: #545454;
+}
+
+table td span.status {
+  width: 0.6rem;
+  margin-right: 0.2rem;
+  border-radius: 50%;
+  height: 0.6rem;
+  display: inline-block;
+}
+
+table td span.active {
+  background-color: rgba(0, 128, 0, 0.244);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  color: green;
+  font-weight: 600;
+}
+
+table td span.inactive {
+  background-color: rgba(128, 128, 128, 0.187);
+  color: #7e7e7e;
+}
+
+/* pagination */
+
+.pagination {
+  background-color: var(--bg-white);
+  margin-top: 3px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: end;
+  padding: 0.7rem 1.4rem;
+}
+
+.pagination select {
+  background-color: unset;
+  color: var(--text-black);
+  border: 0;
+}
+
+button:focus {
+  outline: unset;
+  border: 0;
+}
+
+.pagination .btn_grp {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pagination button {
+  background-color: var(--bg-white);
+  padding: 0;
+  color: gray;
+}
+
+.pagination .doubleArrow {
+  font-size: 1.5rem;
+}
