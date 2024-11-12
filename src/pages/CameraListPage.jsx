@@ -58,14 +58,19 @@ const CameraListPage = () => {
 
   const handleDeleteSelected = async () => {
     try {
-      // Delete all selected cameras
+      // Delete all selected cameras using API
       await Promise.all(selectedCameras.map((id) => deleteCamera(id)));
 
-      // Remove deleted cameras from state
+      // Remove deleted cameras from both cameras and filteredCameras states
       setCameras((prev) =>
         prev.filter((cam) => !selectedCameras.includes(cam.id))
       );
-      setSelectedCameras([]); // Clear selection after deletion
+      setFilteredCameras((prev) =>
+        prev.filter((cam) => !selectedCameras.includes(cam.id))
+      );
+
+      // Clear the selected cameras
+      setSelectedCameras([]);
     } catch (error) {
       console.error("Error deleting cameras:", error);
     }

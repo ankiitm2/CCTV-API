@@ -275,9 +275,11 @@ button:focus {
     font-size: 1.075rem;
   }
 
+  .pagination select,
+  .pagination > div,
   table,
   table td,
   .filter_box select {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
   }
 }
